@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,k,cur=1;
+    queue<int> qu;
+    cin>>n>>k;
+    for (int i=1;i<=n;i++) qu.push(i);
+    while(!qu.empty()){
+        for (int i=1;i<=k-1;i++){
+            qu.push(qu.front());
+            qu.pop();
+        }
+        cout<<qu.front()<<" ";
+        qu.pop();
+    }
+} PROB A
